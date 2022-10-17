@@ -40,7 +40,7 @@ class Categories extends React.Component{
     
     renderCard(card,key){
         return(
-            <SwiperSlide key={key} style={{marginLeft:'10px'}}>
+            <SwiperSlide key={key}>
             <Card className="card-container" >
             <CardActionArea className="card-actionarea">
               <CardMedia
