@@ -17,7 +17,7 @@ class Popular extends React.Component{
 
     renderTitle(){
         return(
-            <div className='popular-title-container' style={{color:'white'}}>
+            <div className='popular-title-container' style={{color:'black'}}>
                 <h2 className='popular-title'>Popular locations in and around <strong>Beirut</strong> </h2>
             </div>
         )
@@ -38,7 +38,7 @@ class Popular extends React.Component{
                             </p>
                         </div>
                         <i>
-                            <ChevronRight/>
+                            <ChevronRight style={{color:'red'}}/>
                         </i>
                     </div>
                 </a>
@@ -67,7 +67,7 @@ class Popular extends React.Component{
 
     render(){
         return (
-            <div  style={{backgroundColor:'red'}}>
+            <div>
                 <div className='popular-container'>
                 {this.renderTitle()}
                 {this.renderGrid()}

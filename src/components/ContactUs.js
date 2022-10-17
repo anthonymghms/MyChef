@@ -49,7 +49,7 @@ export class Contact extends React.Component{
                     </div>
                     <div className="form-group row">
                         <div className="d-flex col-md-6 w-100">
-                            <input type="submit" className="btn btn-block btn-primary message-btn text-white py-3 px-5 ms-auto" value="Send Message">                                            
+                            <input type="submit" className="btn btn-block btn-primary-1 message-btn text-white py-3 px-5 ms-auto" value="Send Message">                                            
                             </input>
                         </div>
                     </div>
@@ -60,8 +60,8 @@ export class Contact extends React.Component{
     renderDetails(){
         return(
             <div className="col-lg-4 ml-auto details" data-aos="fade-up" data-aos-delay="200">
-                <h2 className="text-black">Need to know more on details. Get In Touch</h2>
-                <input type="submit" className="btn btn-block btn-primary message-btn text-white py-3 px-5 ms-auto" value="Get Started">                                            
+                <h2 className="text-black">Need to know more details? Get In Touch.</h2>
+                <input type="submit" className="btn btn-block btn-primary-1 message-btn text-white py-3 px-5 ms-auto" value="Get Started">                                            
                 </input>
             </div>
         )
@@ -84,7 +84,7 @@ export class Contact extends React.Component{
 
     render() {
         return (
-            <div className="site-section bg-light" id="contact-section">
+            <div className="site-section" id="contact-section">
                 <div className="container">
                     {this.renderTitle()}
                     {this.renderContent()}

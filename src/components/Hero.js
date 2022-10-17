@@ -30,7 +30,9 @@ const Location = styled('div')(({ theme }) => ({
     gridColumn:'span 2 / span 2',
     gridColumnStart:'1',
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
+    borderBottomRightRadius:0,
+    borderTopRightRadius:0,
+    borderRadius: '4px 0 0 4px',
     backgroundColor: 'white',
     '&:hover': {
       backgroundColor: 'white',
@@ -57,7 +59,7 @@ const Search = styled('div')(({ theme }) => ({
     gridColumn:'span 4 / span 4',
     gridColumnStart:'3',
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
+    borderRadius: '0 4px 4px 0',
     backgroundColor: 'white',
     '&:hover': {
       backgroundColor: 'white',
@@ -110,7 +112,7 @@ const Hero = () => {
                             <LocationIconWrapper>
                               <LocationOn/>
                             </LocationIconWrapper>
-                          <StyledMenu/>
+                            <StyledMenu/>
                           </Location>
                           <Search>
                               <SearchIconWrapper>

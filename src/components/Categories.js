@@ -7,17 +7,15 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import "swiper/css/navigation"
 import { 
     Autoplay,
-    Navigation 
 } from "swiper";
 
 const cardInfo = [
-    {image:'./images/image.png',title:'Burgers',chefs:'26 chefs'},
-    {image:'./images/image.png',title:'Pizza',chefs:'19 chefs'},
-    {image:'./images/image.png',title:'Pasta',chefs:'21 chefs'},
-    {image:'./images/image.png',title:'Sandwiches',chefs:'43 chefs'},
+    {image:'./images/burger.jpg',title:'Burgers',chefs:'26 chefs'},
+    {image:'./images/pizza.jpg',title:'Pizza',chefs:'19 chefs'},
+    {image:'./images/pasta.jpg',title:'Pasta',chefs:'21 chefs'},
+    {image:'./images/sandwiches.jpg',title:'Sandwiches',chefs:'43 chefs'},
 ]
 
 class Categories extends React.Component{
@@ -42,7 +40,7 @@ class Categories extends React.Component{
     
     renderCard(card,key){
         return(
-            <SwiperSlide key={key}>
+            <SwiperSlide key={key} style={{marginLeft:'10px'}}>
             <Card className="card-container" >
             <CardActionArea className="card-actionarea">
               <CardMedia
@@ -58,7 +56,7 @@ class Categories extends React.Component{
                 <Typography variant="body2" className="card-content-text">
                   {card.chefs}
                   <i>
-                    <ArrowRightIcon/>
+                    <ArrowRightIcon style={{marginBottom: '-7px'}}/>
                 </i>
                 </Typography>
               </CardContent>
@@ -79,9 +77,16 @@ class Categories extends React.Component{
                 dynamicBullets: true,
             }}
             modules={[
-                Autoplay,
-                Navigation
-                ]}
+                Autoplay
+            ]}
+            breakpoints={{
+                320:{
+                    slidesPerView:1,
+                },
+                689:{
+                    slidesPerView:4
+                }
+            }}
             className="mySwiper"
             slidesPerView={4}
             loop={true}
@@ -90,10 +95,8 @@ class Categories extends React.Component{
                 disableOnInteraction: false,
             }}
             speed={1000}
-            navigation={true}
             style={{
-                "--swiper-theme-color":'white',
-                "--swiper-navigation-size":"20px"
+                "--swiper-theme-color":'white'
             }}>
                 {this.renderAllCards()}
             </Swiper>
