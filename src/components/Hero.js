@@ -97,10 +97,10 @@ const Search = styled('div')(({ theme }) => ({
 const Hero = () => {
     return (
                   <div className='hero-container'>
-                    <div className='logo-container'>
-                        <img src='./images/logoMychef.png' className='img-hero' alt='Logo' />    
-                    </div>
                     <div className='content-container'>
+                      <div className='logo-container'>
+                          <img src='./images/logoMychef.png' className='img-hero' alt='Logo' />    
+                      </div>
                       <div className='hero-text'>
                           <p>Discover the best local chefs around you</p>
                       </div>
