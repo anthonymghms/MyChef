@@ -43,7 +43,7 @@ class Explore extends React.Component {
     
     render(){
         return (
-            <div className='explore-container'>
+            <div className='explore-container' id='explore'>
                 {this.renderAllCards()}
             </div>
 

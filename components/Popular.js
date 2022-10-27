@@ -68,7 +68,7 @@ class Popular extends React.Component{
     render(){
         return (
             <div>
-                <div className='popular-container'>
+                <div className='popular-container' id='popular'>
                 {this.renderTitle()}
                 {this.renderGrid()}
                 </div>

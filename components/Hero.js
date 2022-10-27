@@ -6,7 +6,7 @@ import { LocationOn } from '@mui/icons-material';
 import { Autocomplete } from '@mui/material';
 import { TextField } from '@mui/material';
 
-const cities = ["Aaley","Adma","Ashrafiye","Baabda","Baalbek","Beirut","Broummana","Bsalim","Chekka","Dbaiye","Dik el Mehdi","Halba","Hboub","Sarba","Sidon","Tripoli","Yanar","Zgharta"]
+const cities = ["Detect Your Current Location","Aaley","Adma","Ashrafiye","Baabda","Baalbek","Beirut","Broummana","Bsalim","Chekka","Dbaiye","Dik el Mehdi","Halba","Hboub","Sarba","Sidon","Tripoli","Yanar","Zgharta"]
 
 
 const StyledMenu = () => {

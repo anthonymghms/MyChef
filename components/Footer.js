@@ -3,25 +3,25 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const Footer = () => {
   return (
-    <MDBFooter color="red" className="font-small pt-4 mt-4">
+    <MDBFooter color="black" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-          <img src='./images/logoMychef.png' className='img-hero' alt='Logo' />    
+          <img src='./images/logoMychef.png' className='img-hero' alt='Logo' style={{marginTop:'30px'}} />    
           </MDBCol>
           <MDBCol md="6">
             <h2 className="title">About MyChef</h2>
               <h4 className="list-unstyled">
-                <a href="#!">Join Now</a>
+                <a href="#top">Join Now</a>
               </h4>
               <h4 className="list-unstyled">
-                <a href="#!">Explore</a>
+                <a href="#explore">Explore</a>
               </h4>
               <h4 className="list-unstyled">
-                <a href="#!">Categories</a>
+                <a href="#categories">Categories</a>
               </h4>
               <h4 className="list-unstyled">
-                <a href="#!">Contact Us</a>
+                <a href="#contact-section">Contact Us</a>
               </h4>
           </MDBCol>
         </MDBRow>

@@ -106,7 +106,7 @@ class Categories extends React.Component{
 
     render(){
         return(
-            <div className='categories-container'>
+            <div className='categories-container' id='categories'>
                 {this.renderTitle()}
                 {this.renderSwiper()}
             </div>

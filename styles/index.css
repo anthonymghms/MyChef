@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *, :after, :before {
   box-sizing: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -568,11 +572,12 @@ textarea.form-control {
   .logo-container{
     width: 480px;
     height: 96px;
+    margin-top: -30px;
   }
 
   .img-hero{
     height: 96px;
-    margin-left: 130px;
+    margin-right: 20%; ;
   }
 
   .search-container{
@@ -585,23 +590,14 @@ textarea.form-control {
     max-height: 64px;
     font-size: 20px;
     margin-left: 20px;
+    margin-top: 20px;
   }
 }
 
 @media screen and (min-width:689px) and (max-width:992px){
-  .explore-container{
-    margin: 0;
+  .explore-container,.categories-container,.popular-container,.site-section{
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .categories-container{
-    margin: 0;
-  }
-
-  .popular-container{
-    margin: 0;
-  }
-
-  .site-section {
-    margin: 0;
-  }
 }
