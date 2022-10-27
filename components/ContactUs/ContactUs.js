@@ -1,5 +1,5 @@
 import * as React from 'react';
-import withUseForm from '../util/withUseForm';
+import withUseForm from '../../util/Forms/withUseForm';
 
 export class Contact extends React.Component{
 

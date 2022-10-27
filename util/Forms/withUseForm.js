@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 
+// eslint-disable-next-line
 const withUseForm = (Component) => (props) => {
     const form = useForm();
 

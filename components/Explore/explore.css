@@ -1,0 +1,19 @@
+.explore-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 20%;
+    
+}
+
+.explore-card {
+    border-radius: 15px !important;
+    width: 600px;
+}
+
+@media screen and (min-width:689px) and (max-width:992px){
+    .explore-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -41,28 +41,28 @@ class Categories extends React.Component{
     renderCard(card,key){
         return(
             <SwiperSlide key={key}>
-            <Card className="card-container" >
-            <CardActionArea className="card-actionarea">
-              <CardMedia
-                component="img"
-                image={card.image}
-                alt="Categories"
-                className='card-media'
-                />
-              <CardContent className="card-content">
-                <Typography gutterBottom variant="h5" component="div" className='card-content-title'>
-                  {card.title}
-                </Typography>
-                <Typography variant="body2" className="card-content-text">
-                  {card.chefs}
-                  <i>
-                    <ArrowRightIcon style={{marginBottom: '-7px'}}/>
-                </i>
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </SwiperSlide>
+                <Card className="card-container" >
+                    <CardActionArea className="card-actionarea">
+                        <CardMedia
+                            component="img"
+                            image={card.image}
+                            alt="Categories"
+                            className='card-media'
+                            />
+                        <CardContent className="card-content">
+                            <Typography gutterBottom variant="h5" component="div" className='card-content-title'>
+                                {card.title}
+                            </Typography>
+                            <Typography variant="body2" className="card-content-text">
+                            {card.chefs}
+                                <i>
+                                    <ArrowRightIcon style={{marginBottom: '-7px'}}/>
+                                </i>
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+            </SwiperSlide>
         )
     }
     
@@ -87,7 +87,6 @@ class Categories extends React.Component{
                     slidesPerView:4
                 }
             }}
-            className="mySwiper"
             slidesPerView={4}
             loop={true}
             autoplay={{

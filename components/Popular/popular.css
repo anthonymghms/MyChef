@@ -1,0 +1,110 @@
+.popular-container{
+    margin: 100px 20%;
+}
+
+.popular-title-container {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+}
+
+.popular-title{
+    font-size: 3.6rem;
+    font-weight: 300;
+}
+
+.item-container {
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0px 10px 15px 0px;
+}
+
+.item-tag{
+    text-decoration: none;
+}
+
+.item-content {
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.8rem;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 232, 232);
+    margin-bottom: 0.5rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item-title-box {
+    width: calc(100% - 3.5rem);
+    display: flex;
+    flex-direction: column;
+  }
+  
+.item-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+    margin: 0px 0px 0.5rem;
+}
+  
+.item-desc{
+    font-size: inherit;
+    line-height: 1.5;
+    margin: 0px;
+    color: rgb(54, 54, 54);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-gap: 10px;
+}
+
+.collapse-item-container{
+    position: relative;
+    width: 100%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0px 10px 15px 0px;
+  }
+  
+.collapse-box{
+    width: inherit;
+    height: 7rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 232, 232);
+    box-sizing: border-box;
+    border-radius: 0.8rem;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+}
+  
+.collapse-title{
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}  
+
+@media screen and (min-width:689px) and (max-width:992px){
+    .popular-container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import ResponsiveAppBar from '../components/ResponsiveAppBar';
-import Hero from '../components/Hero';
-import Explore from '../components/Explore';
-import Categories from '../components/Categories';
-import Popular from '../components/Popular';
-import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
+import ResponsiveAppBar from '../components/ResponsiveAppBar/ResponsiveAppBar';
+import Hero from '../components/Hero/Hero';
+import Explore from '../components/Explore/Explore';
+import Categories from '../components/Categories/Categories';
+import Popular from '../components/Popular/Popular';
+import ContactUs from '../components/ContactUs/ContactUs';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
