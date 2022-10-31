@@ -8,9 +8,10 @@ import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
 export default function LandingPage() {
+
   return (
     <>
-    <ResponsiveAppBar loggedIn={false}/>
+    <ResponsiveAppBar loggedIn={true}/>
     <Hero/>
     <Explore/>
     <Categories/>

@@ -5,6 +5,7 @@ import InputBase from '@mui/material/InputBase';
 import { LocationOn } from '@mui/icons-material';
 import { Autocomplete } from '@mui/material';
 import { TextField } from '@mui/material';
+import Image from 'next/image';
 
 const cities = ["Detect Your Current Location","Aaley","Adma","Ashrafiye","Baabda","Baalbek","Beirut","Broummana","Bsalim","Chekka","Dbaiye","Dik el Mehdi","Halba","Hboub","Sarba","Sidon","Tripoli","Yanar","Zgharta"]
 
@@ -101,7 +102,7 @@ const Hero = () => {
                   <div className='hero-container'>
                     <div className='content-container'>
                       <div className='logo-container'>
-                          <img src='./images/logoMychef.png' className='img-hero' alt='Logo' />    
+                        <img src='./images/logoMychef.png' className='img-hero' alt=''/> 
                       </div>
                       <div className='hero-text'>
                           <p>Discover the best local chefs around you</p>
