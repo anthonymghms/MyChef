@@ -10,6 +10,6 @@ export default async function handler(req,res){
       return res.json({status:"Not able to find user"})
    }
    else {
-    res.redirect('/welcome')
+    res.sendFile('/welcome')
    }
 }  
