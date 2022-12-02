@@ -5,7 +5,6 @@
 @import '../components/Popular/popular.css';
 @import '../components/ContactUs/contact-us.css';
 @import '../components/Footer/footer.css';
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 html {
   scroll-behavior: smooth;
@@ -21,6 +20,8 @@ body {
   font-family: Okra, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
+  overflow: auto !important;
 }
 
 code {

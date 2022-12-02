@@ -1,5 +1,6 @@
 import * as React from 'react';
 import withUseForm from '../../util/Forms/withUseForm';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export class Contact extends React.Component{
 
