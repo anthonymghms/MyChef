@@ -18,7 +18,7 @@ class Popular extends React.Component{
     renderTitle(){
         return(
             <div className='popular-title-container' style={{color:'black'}}>
-                <h2 className='popular-title'>Popular locations in and around <strong>Beirut</strong> </h2>
+                <h2 className='popular-title'>Popular locations in and <br></br>around<strong> Beirut</strong> </h2>
             </div>
         )
 
@@ -38,7 +38,7 @@ class Popular extends React.Component{
                             </p>
                         </div>
                         <i>
-                            <ChevronRight style={{color:'red'}}/>
+                            <ChevronRight style={{color:'black'}}/>
                         </i>
                     </div>
                 </a>
@@ -57,7 +57,7 @@ class Popular extends React.Component{
                 {this.renderAllItems()}
                 <div className='collapse-item-container'>
                     <div className='collapse-box'>
-                        <div className='collapse-title'>see more</div>
+                        <div className='collapse-title'>See more</div>
                         <i><KeyboardArrowDown/></i>
                     </div>
                 </div>

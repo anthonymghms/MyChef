@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import { 
+import {
     Autoplay,
 } from "swiper";
 
@@ -24,7 +24,7 @@ class Categories extends React.Component{
             <div className='categories-title-container'>
                 <h2 className='categories-title'>Categories</h2>
                 <div className='categories-description'>
-                    <h6 className='description-text'>Explore curated lists of top restaurants, cafes, pubs, and bars in Beirut, based on trends</h6>
+                    <h6 className='description-text'>Explore curated lists of top dishes in Beirut, based on trends</h6>
                     <a href='#top' className='categories-btn'>
                         <span className='categories-btn-text'>
                             All categories in Beirut
@@ -37,7 +37,7 @@ class Categories extends React.Component{
             </div>
         )
     }
-    
+
     renderCard(card,key){
         return(
             <SwiperSlide key={key}>
@@ -56,7 +56,7 @@ class Categories extends React.Component{
                             <Typography variant="body2" className="card-content-text">
                             {card.chefs}
                                 <i>
-                                    <ArrowRightIcon style={{marginBottom: '-7px'}}/>
+                                    <ArrowRightIcon style={{marginBottom: '0px'}}/>
                                 </i>
                             </Typography>
                         </CardContent>
@@ -65,7 +65,7 @@ class Categories extends React.Component{
             </SwiperSlide>
         )
     }
-    
+
     renderAllCards(){
         return cardInfo.map((card,key) => this.renderCard(card,key))
     }
