@@ -35,6 +35,10 @@
     margin-bottom: 30px;
 }
 
+.search-container{
+    width: 200px;
+}
+
 @media screen and (max-width:688px){
     .hero-container{
         position: relative;

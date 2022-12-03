@@ -19,6 +19,7 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import SearchBar from '../Hero/search-container';
 
 
 const pages = ['Become a Chef', 'Log In', 'Sign Up'];
@@ -73,7 +74,7 @@ const ResponsiveAppBar = (props) => {
   };
 
   return (
-      <AppBar position="static" color='transparent' sx={{'overflow':"hidden","position":"absolute"}} id='top'>
+      <AppBar position="static" color='transparent' sx={props.loggedIn === false ? {'overflow':"hidden","position":"absolute"} : {}} id='top'>
         <Container maxWidth="xl" sx={{'zIndex':11}}>
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} color='black'>
@@ -111,7 +112,7 @@ const ResponsiveAppBar = (props) => {
                     <Button textAlign="center" onClick={(page === 'Log In' ? handleOpen
                   : page === 'Become a Chef' ? handleOpenChef
                   : page === 'Sign Up' ? handleOpenSignUp
-                  : () => {} )} >{page}</Button>
+                  : () => null)} >{page}</Button>
                   </MenuItem>
                 ))) : (<React.Fragment>
                         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>                        
@@ -192,6 +193,7 @@ const ResponsiveAppBar = (props) => {
                 {}
               </Menu>
             </Box>
+            {props.loggedIn === true ? <SearchBar loggedIn={true}/> : <></>}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent: 'end'}}>
               {props.loggedIn === false ? (pages.map((page) => (
                 <Button
@@ -205,7 +207,7 @@ const ResponsiveAppBar = (props) => {
                   {page}
                 </Button>
               ))) : (<React.Fragment>
-    <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center',justifyContent:'end' }}>
       <Tooltip title="Account settings">
         <IconButton
           onClick={handleClickAvatar}
