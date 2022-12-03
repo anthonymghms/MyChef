@@ -7,6 +7,10 @@ import Popular from '../components/Popular/Popular';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
+
+{/* <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">  
+</script> */}
+
 export default function LandingPage() {
   return (
     <>

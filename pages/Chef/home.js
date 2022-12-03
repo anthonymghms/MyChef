@@ -6,11 +6,12 @@ import AddButton from "../../components/Chef/addButton";
 import AddCard from "../../components/Chef/addCard";
 import { Box } from "@mui/system";
 import Stack from '@mui/material/Stack';
-
+import Script from 'next/script';
 
 const ChefHomePage = () => {
     return (
          <>
+          <Script src="https://upload-widget.cloudinary.com/global/all.js" />
         <MenuAppBar/>
        
         <Box sx={{ 
