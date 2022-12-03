@@ -22,6 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0 !important;
   overflow: auto !important;
+  background-color: seashell !important;
 }
 
 code {
