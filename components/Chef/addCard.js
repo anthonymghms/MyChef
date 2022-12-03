@@ -128,6 +128,7 @@ const AddCard = () => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={categorie}
+          name="categorie"
           label="Categorie"
           onChange={handleChange}
         >
@@ -147,6 +148,7 @@ const AddCard = () => {
           id="outlined-required"
           label="Title"
           value={name}
+          name='name'
           onChange = {(e) => handleChangeName(e)} 
           defaultValue=""
         />
@@ -158,6 +160,7 @@ const AddCard = () => {
           id="outlined-required"
           label="Description"
           value={description}
+          name='description'
           onChange = {(e) => handleChangeDescription(e)} 
           defaultValue=""
         />
@@ -167,6 +170,7 @@ const AddCard = () => {
           id="outlined-required"
           label="Price"
           defaultValue=""
+          name='price'
           value={price}
           
           onChange = {(e) => handleChangePrice(e)} 
@@ -183,14 +187,14 @@ const AddCard = () => {
         </Box>
       {/* )} */}
       </Box>
+      <CardActions>
+        <Button size="small" onClick={handleSubmit} type='submit'>Add </Button>
+      </CardActions>
     </Box>
 
       </CardContent>
       
 
-      <CardActions>
-        <Button size="small" onClick={handleSubmit}>Add </Button>
-      </CardActions>
     </Card>
     
   );
