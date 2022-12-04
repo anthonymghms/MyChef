@@ -9,21 +9,14 @@ import { CardHeader } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { useState, useEffect , useRef} from "react";
-import Script from 'next/script';
+
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
+
 
 
 
@@ -36,6 +29,7 @@ const AddCard = () => {
   const [price, setPrice] = useState(null);
   const [quantity,setQuantity] = useState(null);
   const [image, setImage] = useState(null);
+  const [test, setTest] = useState(null);
 
   const handleChangeName = (event) => {
     setName(event.target.value);
@@ -50,7 +44,13 @@ const AddCard = () => {
       const handleChangePrice = (event) => {
         setPrice(event.target.value);
         };
-      
+        const handleChangeTest = (event) => {
+          setTest(event.target.value);
+          };
+          const handleChangeImage = (img) => {
+            setImage(img);
+            };
+  
 
   const [categorie, setCategorie] = React.useState('');
   const handleChange = (event) => {
@@ -65,18 +65,18 @@ const AddCard = () => {
           name : name,
           description : description,
           price : price,
-          quantity:quantity,
           image : image,
-          
+          test:test,
       }       
-      // const response = await fetch('/api/pages/api/additem',{
+      // const response = await fetch('/api/pages/api/addcatalog',{
       //   method : 'POST',
       //   body : obj,
 
       // })
     
-
+console.log("-------");
   console.log(obj);
+  console.log("-------");
   }
 
 
@@ -84,21 +84,29 @@ const AddCard = () => {
 
         const cloudinaryRef = useRef();
         const widgetRef = useRef();
-        useEffect(()=>{
+        useEffect( ()=> {
           cloudinaryRef.current = window.cloudinary;
+
           console.log(cloudinaryRef.current)
-          widgetRef.current = cloudinaryRef.current.createUploadWidget({
+           widgetRef.current = cloudinaryRef.current.createUploadWidget({
             cloudName: 'dkqjojajg', 
             uploadPreset: 'MyChefImages',
-        },function (error,result){console.log(result);
+        },
+         function (error,result){
+          console.log(result);
           if (!error && result && result.event === "success") {
-            console.log("Done! Here is the image info: ", result.info);
-            setImage(result.info.secure_url);
+          //   console.log("Done! Here is the image info: ", result.info);
             
-            console.log(result.info.secure_url);
-            document
-              .getElementById("uploadedimage")
-              .setAttribute("src", result.info.secure_url);
+          //   console.log("Hey");
+          //    console.log(result.info.secure_url);
+           console.log(result.info.url);
+           
+              setImage(result.info.url);
+          
+            console.log("here is the image url set: " + image);
+            // document
+            //   .getElementById("uploadedimage")
+            //   .setAttribute("src", result.info.secure_url);
           }
         });
         },[])
@@ -106,19 +114,27 @@ const AddCard = () => {
   
     
   return (
+
     
-    <Card sx={{ maxWidth: 300 }}>
+  
+    <Card sx={{ maxWidth: 500 ,
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+      overflowY: "scroll",}}>
+       
       <CardContent>
       
       
         <Box
       component="form"
       sx={{
+        
         '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off"
-      action='/api/additem' 
+      action='/api/addcatalog' 
       method='post'
     >
       <Box>
@@ -155,6 +171,19 @@ const AddCard = () => {
        
         </Box>
         <Box>
+      
+      <TextField
+        required
+        id="outlined-required"
+        label="test"
+        value={test}
+        name='test'
+        onChange = {(e) => handleChangeTest(e)} 
+        defaultValue=""
+      />
+     
+      </Box>
+        <Box>
            <TextField
           required
           id="outlined-required"
@@ -175,15 +204,15 @@ const AddCard = () => {
           
           onChange = {(e) => handleChangePrice(e)} 
         />
-        
+       
         <Box>
-        <Script src="https://upload-widget.cloudinary.com/global/all.js" />
+       
   
-        <Button  onClick={()=>widgetRef.current.open()}>Upload</Button>
+        <Button  onClick={()=>widgetRef.current.open()}  >Upload</Button>
 
         <Box mt={2} textAlign="center">
           
-          <img id="uploadedimage" src=""></img>
+          <img id="uploadedimage"  src={image} value={image} ></img>
         </Box>
       {/* )} */}
       </Box>

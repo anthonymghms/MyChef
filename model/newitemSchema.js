@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const itemSchema = new mongoose.Schema({
+const catalogSchema = new mongoose.Schema({
     categorie : {
         type: String,
         required:true,
@@ -22,7 +22,7 @@ const itemSchema = new mongoose.Schema({
     },
     image:{
         type:String,
-        required: true,    
+        required: true,
     },
     test:{
         type:String,
@@ -31,7 +31,7 @@ const itemSchema = new mongoose.Schema({
     
 })
 
-module.exports = mongoose.models.Item || mongoose.model('Item',itemSchema)
+module.exports = mongoose.models.Catalog || mongoose.model('Catalog',catalogSchema)
 
 
 
