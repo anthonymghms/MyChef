@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Link from 'next/link';
 
 const content = [
     {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg'},
@@ -14,8 +15,10 @@ class Explore extends React.Component {
     
     renderCard(card,key){
         return(
+            
             <Card sx={{ maxWidth: 345 }} key={key} className="explore-card">
-                <CardActionArea>
+                <Link href='/Explore/chefs'>
+                <CardActionArea >
                     <CardMedia
                     component="img"
                     height="140"
@@ -31,7 +34,9 @@ class Explore extends React.Component {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
+                </Link>
             </Card>
+            
         )
     }
 

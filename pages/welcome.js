@@ -7,13 +7,15 @@ import Popular from '../components/Popular/Popular';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
+
+
 export default function LandingPage() {
 
   return (
     <>
     <ResponsiveAppBar loggedIn={true}/>
     <Hero/>
-    <Explore/>
+   <Explore/>
     <Categories/>
     <Popular/>
     <ContactUs/>
