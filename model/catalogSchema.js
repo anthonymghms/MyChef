@@ -24,10 +24,6 @@ const catalogSchema = new mongoose.Schema({
         type:String,
         required: true,
     },
-    test:{
-        type:String,
-        required: true,
-    }
     
 })
 

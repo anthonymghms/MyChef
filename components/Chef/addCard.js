@@ -20,7 +20,6 @@ const AddCard = () => {
   const [description, setDescription] = useState(null);
   const [price, setPrice] = useState(null);
   const [image, setImage] = useState(null);
-  const [test, setTest] = useState(null);
 
   const handleChangeName = (event) => {
     setName(event.target.value);
@@ -31,12 +30,6 @@ const AddCard = () => {
       const handleChangePrice = (event) => {
         setPrice(event.target.value);
         };
-        const handleChangeTest = (event) => {
-          setTest(event.target.value);
-          };
-          const handleChangeImage = (img) => {
-            setImage(img);
-            };
   
 
   const [categorie, setCategorie] = React.useState('');
@@ -53,7 +46,6 @@ const AddCard = () => {
           description : description,
           price : price,
           image : image,
-          test:test,
       }       
       // const response = await fetch('/api/pages/api/addcatalog',{
       //   method : 'POST',
@@ -148,19 +140,6 @@ console.log("-------");
         />
        
         </Box>
-        <Box>
-      
-      <TextField
-        required
-        id="outlined-required"
-        label="test"
-        value={test}
-        name='test'
-        onChange = {(e) => handleChangeTest(e)} 
-        defaultValue=""
-      />
-     
-      </Box>
         <Box>
            <TextField
           required

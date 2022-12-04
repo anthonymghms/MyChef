@@ -1,5 +1,5 @@
 import connect from "../../lib/mongodb";
-import Catalog from '../../model/newitemSchema';
+import Catalog from '../../model/catalogSchema';
 
 connect()
 
