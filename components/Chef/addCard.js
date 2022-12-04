@@ -9,25 +9,16 @@ import { CardHeader } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import { useState, useEffect , useRef} from "react";
-
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-
-
-
-
-
-
 const AddCard = () => {
-
 
   const [name, setName] = useState(null);
   const [description, setDescription] = useState(null);
   const [price, setPrice] = useState(null);
-  const [quantity,setQuantity] = useState(null);
   const [image, setImage] = useState(null);
   const [test, setTest] = useState(null);
 
@@ -37,10 +28,6 @@ const AddCard = () => {
     const handleChangeDescription = (event) => {
       setDescription(event.target.value);
       };
-      const handleChangeQuantity = (event) => {
-        setQuantity(event.target.value);
-        };
-    
       const handleChangePrice = (event) => {
         setPrice(event.target.value);
         };
@@ -95,18 +82,9 @@ console.log("-------");
          function (error,result){
           console.log(result);
           if (!error && result && result.event === "success") {
-          //   console.log("Done! Here is the image info: ", result.info);
-            
-          //   console.log("Hey");
-          //    console.log(result.info.secure_url);
            console.log(result.info.url);
-           
               setImage(result.info.url);
-          
             console.log("here is the image url set: " + image);
-            // document
-            //   .getElementById("uploadedimage")
-            //   .setAttribute("src", result.info.secure_url);
           }
         });
         },[])
@@ -210,9 +188,15 @@ console.log("-------");
   
         <Button  onClick={()=>widgetRef.current.open()}  >Upload</Button>
 
-        <Box mt={2} textAlign="center">
-          
-          <img id="uploadedimage"  src={image} value={image} ></img>
+        <Box mt={2} textAlign="center">  
+          <img id="uploadedimage" src={image} value={image} ></img>
+          <TextField
+          sx={{display:'none'}}
+          required
+          id="outlined-required"
+          value={image}
+          name='image'
+          defaultValue="">{image}</TextField>
         </Box>
       {/* )} */}
       </Box>
