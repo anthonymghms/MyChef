@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Catalog from './catalogSchema';
 
 const userSchema = new mongoose.Schema({
     firstName:{
@@ -19,7 +20,7 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     items:{
-        type:Array
+        type:[]
     }
 })
 

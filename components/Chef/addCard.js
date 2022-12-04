@@ -13,6 +13,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Image from 'next/image';
 
 const AddCard = () => {
 
@@ -53,9 +54,7 @@ const AddCard = () => {
 
       // })
     
-console.log("-------");
-  console.log(obj);
-  console.log("-------");
+
   }
 
 
@@ -79,7 +78,7 @@ console.log("-------");
             console.log("here is the image url set: " + image);
           }
         });
-        },[])
+        })
         
   
     
@@ -168,7 +167,7 @@ console.log("-------");
         <Button  onClick={()=>widgetRef.current.open()}  >Upload</Button>
 
         <Box mt={2} textAlign="center">  
-          <img id="uploadedimage" src={image} value={image} ></img>
+          <img alt='your image' id="uploadedimage" src={image} value={image} />
           <TextField
           sx={{display:'none'}}
           required
