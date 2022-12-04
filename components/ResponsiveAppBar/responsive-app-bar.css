@@ -1,29 +1,29 @@
 .css-15351is-MuiButtonBase-root-MuiButton-root {
     text-transform: none !important;
 }
-  
+
 .css-1kcggdq-MuiInputBase-root {
     display: flex !important;
     justify-content: flex-start !important;
     height: 100%;
 }
-  
+
 .css-gcwvw8-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
       padding: 7.5px 4px 7.5px 50px !important;
 }
-  
+
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
     margin-left: 40px;
 }
-  
+
 .css-1ri6ub7-MuiPaper-root-MuiCard-root {
     max-width: none !important;
 }
-  
+
 .css-46bh2p-MuiCardContent-root {
     padding: 10px 0 15px 15px !important;
 }
-  
+
 .css-h93ljk-MuiTypography-root{
     margin-bottom: 2px !important;
 }
@@ -31,7 +31,7 @@
 .css-1cpnt6l-MuiPaper-root-MuiAppBar-root{
     box-shadow: none !important;
 }
-  
+
 .css-v526sl-MuiPaper-root-MuiAppBar-root{
     box-shadow: none !important;
 }
@@ -40,10 +40,10 @@
     .css-15ytkbm{
         display: inline-flex !important;
         flex-wrap: wrap;
-        gap: 30px; 
+        gap: 30px;
         margin-right: 100px;
     }
-  
+
     .css-1kcggdq-MuiInputBase-root .MuiInputBase-input {
       width: 250px !important;
     }

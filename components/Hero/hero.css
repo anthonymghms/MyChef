@@ -9,12 +9,13 @@
     justify-content: center;
     flex-direction: column;
     height: 65vh;
-  
+
 }
+
 
 .content-container{
     margin-bottom: 50px;
-}  
+}
 
 .logo-container{
     display: flex;
@@ -29,7 +30,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
 }
-  
+
 .hero-text p{
     margin-top: 0;
     margin-bottom: 30px;
@@ -39,14 +40,14 @@
     .hero-container{
         position: relative;
     }
-    
+
     .content-container{
           max-height: 228px ;
           max-width: 390px;
           position: absolute;
           bottom: 0;
           margin-bottom: 35px;
-          
+
     }
 
     .logo-container{

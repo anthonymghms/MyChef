@@ -107,14 +107,14 @@ const ResponsiveAppBar = (props) => {
                 color='black'
               >
               {props.loggedIn === false ? (pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Button textAlign="center" onClick={(page === 'Log In' ? handleOpen
+                  <MenuItem key={page}  onClick={handleCloseNavMenu}>
+                  <Button textAlign="center" onClick={(page === 'Log In' ? handleOpen
                   : page === 'Become a Chef' ? handleOpenChef
                   : page === 'Sign Up' ? handleOpenSignUp
                   : () => {} )} >{page}</Button>
                   </MenuItem>
                 ))) : (<React.Fragment>
-                        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>                        
+                        <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                           <Tooltip title="Account settings">
                             <IconButton
                               onClick={handleClickAvatar}
