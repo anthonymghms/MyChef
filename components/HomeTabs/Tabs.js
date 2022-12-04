@@ -8,15 +8,6 @@ import users from '../../pages/api/users.json'
 import Link from 'next/link';
 
 
-export async function getServerSideProps(ctx) {
-    const { userID } = ctx.query;
-    await dbConnect()
-    const user = await User.findOne({userID}).lean() 
-    if (user !== null) {
-      user._id = user._id.toString()
-    }
-    return { props: { user } }
-  }
 
 export default function ActionAreaCard(props) {
   return (
@@ -40,14 +31,10 @@ export default function ActionAreaCard(props) {
 }
 
 
-export const Tab1 = ({ datas }) => {
+export const Tab1 = () => {
     return (
         <div style={{'display':'grid','gridTemplateColumns':'repeat(3, minmax(0, 1fr))'}}>
-            {datas.map(data =>
-                <Link href={'../../Chefs/' + data.firstName + dataef.lastName}  key={data._id}>
-                    <ActionAreaCard name={data.firstName + " " + data.lastName}/>
-                </Link>
-        )}
+          
         </div>
     )
 }
