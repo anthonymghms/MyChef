@@ -1,14 +1,12 @@
 import connect from "../../lib/mongodb";
 import User from '../../model/userSchema';
-
-connect()
+import jwt from 'jsonwebtoken'
 
 
 export default async function handler(req,res){
-        const user = await User.create(req.body)
+    if(req){
+        //return res.json({hi:"HI"})
         res.redirect('/')
-        if(!user){
-            return res.json({code: 'User not created'})
-        }
-    
-}
+    }
+    res.redirect('/',404)
+ }  

@@ -6,6 +6,7 @@ import Categories from '../components/Categories/Categories';
 import Popular from '../components/Popular/Popular';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
+import { getToken } from '../components/ResponsiveAppBar/registrationForm';
 
 
 {/* <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">  
@@ -14,7 +15,7 @@ import Footer from '../components/Footer/Footer';
 export default function LandingPage() {
   return (
     <>
-    <ResponsiveAppBar loggedIn={false}/>
+    <ResponsiveAppBar loggedIn={!getToken() == ''}/>
     <Hero/>
     <Explore/>
     <Categories/>

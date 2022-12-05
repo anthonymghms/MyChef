@@ -19,6 +19,7 @@ import Tooltip from '@mui/material/Tooltip';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
+import Link from 'next/link';
 
 
 const pages = ['Become a Chef', 'Log In', 'Sign Up'];
@@ -166,9 +167,10 @@ const ResponsiveAppBar = (props) => {
                           <MenuItem>
                             <Avatar /> Profile
                           </MenuItem>
-                          <MenuItem>
-                            <Avatar /> My account
-                          </MenuItem>
+                          <Link href={'/Chef/home'} style={{textDecoration:'none',color:'inherit'}}><MenuItem>
+                            <Avatar /> My Chef Account
+                          </MenuItem></Link>
+                          
                           <MenuItem>
                             <ListItemIcon>
                               <PersonAdd fontSize="small" />
@@ -258,7 +260,7 @@ const ResponsiveAppBar = (props) => {
         <Avatar /> Profile
       </MenuItem>
       <MenuItem>
-        <Avatar /> My account
+        <Avatar /> My Chef Account
       </MenuItem>
       <MenuItem>
         <ListItemIcon>

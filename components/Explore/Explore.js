@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 const content = [
-    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg'},
-    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg'}
+    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg',href:''},
+    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg',href:'/Chef/home'}
 ]
 
 class Explore extends React.Component {
@@ -15,7 +15,7 @@ class Explore extends React.Component {
     renderCard(card,key){
         return(
             <Card sx={{ maxWidth: 345 }} key={key} className="explore-card">
-                <CardActionArea>
+                <CardActionArea href='/Chef/home'>
                     <CardMedia
                     component="img"
                     height="140"
