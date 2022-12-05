@@ -7,8 +7,8 @@ import { CardActionArea } from '@mui/material';
 import Link from 'next/link';
 
 const content = [
-    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg'},
-    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg'}
+    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg',href:'/Explore/chefs'},
+    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg',href:'/Explore/food'}
 ]
 
 class Explore extends React.Component {
@@ -17,7 +17,7 @@ class Explore extends React.Component {
         return(
             
             <Card sx={{ maxWidth: 345 }} key={key} className="explore-card">
-                <Link href='/Explore/chefs'>
+                <Link href={card.href}>
                 <CardActionArea >
                     <CardMedia
                     component="img"

@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function FoodCard(props) {
+export default function ChefCard(props) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -34,35 +34,12 @@ export default function FoodCard(props) {
   };
 
   return (
-    <Card sx={{ maxWidth: 300 }}>
-      <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={props.name}
-      />
-      <CardMedia
-        component="img"
-        height="194"
-        image={props.image}
-        alt={props.name}
-      />
+    <Card sx={{ width: 300,height:300,display:'flex',justifyContent:'center', alignItems:'center' }}>
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {props.description}
+        <Typography variant="body2" color="text.secondary" sx={{fontSize:'50px'}}>
+          {props.name}
         </Typography>
       </CardContent>
-      <CardContent sx={{'display':'flex','justifyContent':'space-between'}}>
-        <Typography >
-          Price
-        </Typography>
-        <Typography>
-          {props.price}$
-        </Typography>
-      </CardContent>
-      
     </Card>
   );
 }
