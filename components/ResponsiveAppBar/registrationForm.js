@@ -1,4 +1,11 @@
 import React, {useState} from 'react';
+import jwt from 'jsonwebtoken';
+import {useRouter} from 'next/navigation';
+import LandingPage from '../../pages';
+import { render } from 'react-dom';
+import Router  from 'next/router';
+
+var TOKEN = ''
 
 export function SignUpForm() {
 
@@ -61,21 +68,56 @@ export function SignUpForm() {
     )       
 }
 
+
+
+export function getToken(){
+    return TOKEN
+}
 export function LogInForm() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+    const [token,setToken] = useState('')
+    const router = useRouter();
+
+    const submitForm = async ()=>{
+        const res = await fetch('/api/login', {
+            method:'POST',
+            body: JSON.stringify({email, password}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await res.json();
+        const token = data['token']
+        
+        console.log(data)
+        if(token){
+            const json = jwt.decode(token)
+            TOKEN = token
+            setToken(token)
+            Router.push('/welcome')
+        }
+        return res
+    };
     return(
-      <form className="form" action='/api/login' method='post'>
+      <form className="form">
           <div className="form-body">
               <div className="email">
                   <label className="form__label" for="email">Email </label>
-                  <input  type="email" id="email" name='email' className="form__input" placeholder="Email"/>
+                  <input
+                    type="email" 
+                    className="form__input" 
+                    placeholder="Email" 
+                    value={email} 
+                    onChange={e => setEmail(e.target.value)}/>
               </div>
               <div className="password">
                   <label className="form__label" for="password">Password </label>
-                  <input className="form__input" type="password" name='password'  id="password" placeholder="Password"/>
+                  <input className="form__input" type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
               </div>
           </div>
           <div class="footer">
-              <button type="submit" class="btn">Log In</button>
+              <button type="button" class="btn" onClick={submitForm}>Log In</button>
           </div>
       </form>      
     )       
