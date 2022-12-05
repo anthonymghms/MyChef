@@ -12,6 +12,8 @@ import { getToken } from '../components/ResponsiveAppBar/registrationForm';
 import Router, { useRouter } from 'next/router';
 
 
+
+
 export default function LandingPage() {
   const router = useRouter();
   React.useEffect(() => {
@@ -23,7 +25,7 @@ export default function LandingPage() {
       <>
       <ResponsiveAppBar loggedIn={true}/>
       <Hero/>
-      <Explore/>
+     <Explore/>
       <Categories/>
       <Popular/>
       <ContactUs/>

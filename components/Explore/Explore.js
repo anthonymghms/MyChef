@@ -4,18 +4,21 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Link from 'next/link';
 
 const content = [
-    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg',href:''},
-    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg',href:'/Chef/home'}
+    {title:'Chefs',description:"View the city's favourite chefs",image:'./images/cooking-explore.jpg',href:'/Explore/chefs'},
+    {title:'Food',description:"Explore the city's top dishes",image:'./images/food-explore.jpg',href:'/Explore/food'}
 ]
 
 class Explore extends React.Component {
     
     renderCard(card,key){
         return(
+            
             <Card sx={{ maxWidth: 345 }} key={key} className="explore-card">
-                <CardActionArea href='/Chef/home'>
+                <Link href={card.href}>
+                <CardActionArea >
                     <CardMedia
                     component="img"
                     height="140"
@@ -31,7 +34,9 @@ class Explore extends React.Component {
                     </Typography>
                     </CardContent>
                 </CardActionArea>
+                </Link>
             </Card>
+            
         )
     }
 
